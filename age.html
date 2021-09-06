@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .cont-1,cont-2,cont-3{
+        background-color: blueviolet;
+        margin-left: auto;
+        margin-right: auto;
+        border: 1px solid black;
+        text-align: center;
+    }
+    .cont-2{
+        background-color: blueviolet;
+        margin-left: auto;
+        margin-right: auto;
+        border: 1px solid black;
+        text-align: center;
+    }
+    .cont-3{
+        background-color: blueviolet;
+        margin-left: auto;
+        margin-right: auto;
+        border: 1px solid black;
+        text-align: center;
+    }
+    button{
+        padding: 10px;
+        font-size: 20px;
+        color: rgb(55, 0, 255);
+        border: 2px;
+        border-radius: 20px;
+    }
+    .cont-4{
+        border: black solid 1px;
+        
+        
+    }
+</style>
+<body>
+    <div class="cont-1">
+        <div cont-2>
+            <h1>Hello my boy enter your age.</h1>
+        </div>
+        
+        <div class="cont-3">
+            <button  onclick="ageInDays()">Click me</button>
+            <button id="reset" onclick="reset()">Reset</button>
+        </div>
+        <div class="cont-4" id="flex-box"></div>
+    </div>
+    <script>
+        function ageInDays() {
+           var age = prompt("Enter your age",23);
+           var days =  age * 362;
+           var h1 = document.createElement("h1");
+           var textAnswer = document.createTextNode("You are" + " " + days + " days");
+           h1.setAttribute("id", "ageInDays");
+           h1.appendChild(textAnswer);
+           document.getElementById("flex-box").appendChild(h1);
+           console.log(days);
+                }
+                function reset() {
+                    document.getElementById("ageInDays").remove();
+                }
+    </script>
+</body>
+</html>
